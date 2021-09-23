@@ -27,11 +27,7 @@ class DatabaseHelper{
   Future<int> insertUser(User user) async {
     int result = 0;
     final Database db = await initializeDB();
-    // await truncateDB();
-    // for(var user in users){
-      result = await db.insert('users', user.toMap());
-    // }
-    print("this is the result::"+result.toString());
+    result = await db.insert('users', user.toMap());
     return result;
   }
 
