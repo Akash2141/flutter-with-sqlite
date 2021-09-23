@@ -100,9 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: const Text('Submit'),
                             onPressed:  () async {
                               User user=new User(name:nameController.text,age:int.parse(ageController.text),country: countryController.text,email: emailController.text);
-                              print("this is the test pressed"+nameController.text+" "+ageController.text+" "+countryController.text+" "+emailController.text);
                               int result= await addUser(user);
-                              print("This is the result:"+result.toString());
+                              setState(() {});
                             },
                           )),
                     ],
