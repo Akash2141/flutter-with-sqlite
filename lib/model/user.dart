@@ -1,16 +1,16 @@
 class User {
-  final int? id;
-  final String name;
-  final int age;
-  final String country;
-  final String? email;
+  int? id;
+  String name;
+  int age;
+  String country;
+  String? email;
 
   User(
-      { this.id,
-        required this.name,
-        required this.age,
-        required this.country,
-        this.email});
+      {this.id,
+      required this.name,
+      required this.age,
+      required this.country,
+      this.email});
 
   User.fromMap(Map<String, dynamic> res)
       : id = res["id"],
@@ -20,6 +20,12 @@ class User {
         email = res["email"];
 
   Map<String, Object?> toMap() {
-    return {'id':id,'name': name, 'age': age, 'country': country, 'email': email};
+    return {
+      'id': id,
+      'name': name,
+      'age': age,
+      'country': country,
+      'email': email
+    };
   }
 }
