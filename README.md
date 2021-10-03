@@ -125,7 +125,9 @@ class DatabaseHelper{
 
 ```
 
-We have created a singleton **DatabseHelper** class with the help of factory.
+We have created a singleton **DatabseHelper** class with the help of factory keyword. In dart **factory** keyword is used to create a constructor that would return only single instance of the class. This is the elegant way to make the singleton class in dart. We want to use single instance of the database handler in everywhere which would help us to save the memory and track the single state.  
+
+**_createInstance** is the private named constructor to get the instance of the first time and factory constructor will return the same instance that we have created using the  _createInstance name constructor.
 
 In this class we have written **initializeDB** asynchronous function to initialize the our database which will return an object of Database. To deal with asynchronous in flutter we have **Future** class and **async**, **await** keyword.
 
@@ -182,7 +184,7 @@ We are mainiting the state of the **MyHomePage** state in the **_MyHomePageState
 
 Now we have used **Scaffold** which will provide us **AppBar** and **Body**.
 
-Inside the body we have two section one for form to add the user and another is for view the user.
+Inside the body we have two section one for form to add or update the user another is to view the user list.
 
 The first section is the form
 ```dart
@@ -273,6 +275,8 @@ Column(
           ],
         )
 ```
+
+In the above snippet we can see the some input box to let user enter his inputs and finally 
 
 Another section is for User list in which we get the user with the help of FutureBuilder.
 
