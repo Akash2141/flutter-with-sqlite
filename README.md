@@ -131,7 +131,17 @@ In this class we have written **initializeDB** asynchronous function to initiali
 
 **getDatabasesPath** function will give us a default location of the database in which append our database name. In this case it is **demo.db**.
 
-Now we are creating a table inside the database. In the above snippet you can see the functions of crud operation.
+Now we are creating a table inside the database and have  written some functions to store, update and delete the data from the database.
+
+First function is **insertUser** in which we are getting the object of user and convert it into the map to and pass it in the insert function of the database.
+
+**updateUser** function will update the user in which it's mandatory to have a id in the User object to update the row on the base of user id.
+
+**retrieveUsers** function will get all records from the database and return the list of Map. We are converting map to list.
+
+**deleteUser** function only needs to pass an id to delete the records.
+
+Finally we are create a function **truncateDB** to truncate the database.
 
 Now It's time to get hands dirty on **main.dart** which is the main class to render the elements in our screen.
 
